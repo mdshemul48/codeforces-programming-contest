@@ -9,16 +9,14 @@ int main()
     cin >> year;
     while (true)
     {
-        year++;
-
-        int a = year / 1000;
-        int b = year / 100 % 10;
-        int c = year / 10 % 10;
-        int d = year % 10;
-
-        if (a != b && a != c && a != d && b != d && c != d)
+        year += 1;
+        string yearS = to_string(year);
+        if (yearS[0] == yearS[1] or yearS[0] == yearS[2] or yearS[3] == yearS[0] or yearS[1] == yearS[2] or yearS[2] == yearS[3] or yearS[1] == yearS[3])
         {
-            cout << year << endl;
+        }
+        else
+        {
+            cout << yearS << endl;
             return 0;
         }
     }
