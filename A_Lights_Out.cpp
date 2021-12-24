@@ -59,7 +59,7 @@ int main()
                 toggle(arr, i, j - 1); // left
                 toggle(arr, i, j + 1); // right
                 toggle(arr, i - 1, j); // top
-                toggle(arr, i + 1, j); // top
+                toggle(arr, i + 1, j); // bottom
             }
         }
     }
