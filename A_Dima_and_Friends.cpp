@@ -10,25 +10,61 @@ using namespace std;
 
 void exc()
 {
-    int n, x, y, z, k;
+    int n, x, y, z;
     cin >> n;
-    y = 0;
-    z = 0;
-    k = n;
-    wh(k--)
+    x = 0;
+    fo(int i = 0; i < n; i++)
     {
-        cin >> x;
-        y += x;
+        cin >> y;
+        x += y;
     }
-
-    fo(int i = 1; i <= 5; i++)
+    vector<int> arr;
+    int d = 1;
+    int f = n;
+    fo(int i = 1; i <= x; i++)
     {
-        if ((y + i) % (n + 1) != 1)
+        if (d == 1)
         {
-            z++;
+            arr.push_back(1);
+            d = 0;
+        }
+        else
+        {
+            arr.push_back(0);
+            f--;
+        }
+        if (f == 0)
+        {
+            d = 1;
+            f = n;
         }
     }
-    cout << z << endl;
+
+    int c = 0;
+    fo(int i = 1; i <= 5; i++)
+    {
+        if (d == 1)
+        {
+            arr.push_back(1);
+            d = 0;
+        }
+        else
+        {
+            arr.push_back(0);
+            f--;
+        }
+        if (f == 0)
+        {
+            d = 1;
+            f = n;
+        }
+
+        if (arr[arr.size() - 1] != 1)
+        {
+            c++;
+        }
+    }
+    cout << c << endl;
 }
 
 int32_t main()
