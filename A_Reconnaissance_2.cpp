@@ -21,7 +21,6 @@ void exc()
         arr.push_back(in);
     }
 
-    // sort(arr.begin(), arr.end());
     int diff = abs(arr[0] - arr[n - 1]);
     int f = 0;
     int s = n - 1;
