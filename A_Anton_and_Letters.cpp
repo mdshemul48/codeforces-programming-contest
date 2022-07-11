@@ -1,30 +1,23 @@
 #include <iostream>
+#include <set>
 #include <string>
-#include <unordered_map>
 
 using namespace std;
 
 int main()
 {
-    string s;
-    getline(cin, s);
+    string a;
+    getline(cin, a);
 
-    unordered_map<char, bool> map;
-    int c = 0;
-
-    map['{'] = 1;
-    map['}'] = 1;
-    map[','] = 1;
-    map[' '] = 1;
-
-    for (int i = 0; i < s.length(); i++)
+    set<char> arr;
+    for (int i = 0; i < a.size(); i++)
     {
-        if (map.find(s[i]) == map.end())
+        if (a[i] >= 'a' && a[i] <= 'z')
         {
-            c++;
-            map[s[i]] = 1;
+            arr.insert(a[i]);
         }
     }
-    cout << c << endl;
+    cout << arr.size() << endl;
+
     return 0;
 }
