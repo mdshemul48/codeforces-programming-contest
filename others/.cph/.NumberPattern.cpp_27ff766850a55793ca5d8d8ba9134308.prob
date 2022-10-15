@@ -1,0 +1,1 @@
+{"name":"Local: NumberPattern","url":"c:\\codeforces-programming-contest\\others\\NumberPattern.cpp","tests":[{"id":1665254105504,"input":"5","output":"5\n    1 \n   1 2 \n  1 2 3 \n 1 2 3 4 \n1 2 3 4 5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\codeforces-programming-contest\\others\\NumberPattern.cpp","group":"local","local":true}

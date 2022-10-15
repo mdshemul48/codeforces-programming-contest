@@ -1,0 +1,1 @@
+{"name":"Local: reverseNumber","url":"c:\\codeforces-programming-contest\\others\\reverseNumber.cpp","tests":[{"id":1665765691066,"input":"123","output":"321"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\codeforces-programming-contest\\others\\reverseNumber.cpp","group":"local","local":true}
