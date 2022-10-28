@@ -8,19 +8,22 @@ int main(){
     int arr[n]; 
     for (int i =0; i<n; i++) cin>> arr[i];
 
-    int largest = 0;
-    for (int i =0; i<n-1; i++){
-        int cur = 1; 
-        int j = i;
-        int diff = arr[j+1]- arr[j];
-        while(diff == arr[j+1]-arr[j]){
-            cur++;
-            j++;
+    int diff = arr[1]-arr[0];
+    int count = 2;
+    int maxInt = 2; 
+    int j = 1; 
+    while (j< n){
+        if (arr[j+1]-arr[j] == diff){
+            count++;
+            maxInt = max(count, maxInt);
+        }else{
+            diff = arr[j+1]-arr[j];
+            count = 2;
         }
-        largest= max(largest, cur);
-    
+
+        j++;
     }
-    cout<<largest<<endl;
+    cout<<maxInt<<endl;
 
     return 0; 
 }
