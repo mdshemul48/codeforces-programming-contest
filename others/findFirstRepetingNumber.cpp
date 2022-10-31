@@ -1,27 +1,26 @@
-#include<iostream>
-#include<unordered_map> 
+#include<iostream> 
 
 using namespace std;
 
 int main(){
     int n;
-    cin>> n;
+    cin>> n; 
     int arr[n];
-    for (int i =0; i<n; i++){
+    int store[n];
+    fill(store, store+n, -1);
+
+    for (int i =0;i<n; i++){
         cin>> arr[i];
     }
 
-    unordered_map<int, int> store;
-
-    for (int i =0; i<n; i++){
-        if (store[arr[i]]){
-            cout<<store[arr[i]]-1<<endl;
-            return 0; 
+    for (int i = 0; i<n; i++){
+        if (store[arr[i]] != -1){
+            cout<<store[arr[i]]<<endl;
+            return 0;
         }else{
-            store[arr[i]] = i+1;
+            store[arr[i]] = i;
         }
     }
-    cout<<"-1"<<endl;
 
     return 0; 
 }
