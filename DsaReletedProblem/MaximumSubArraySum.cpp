@@ -1,4 +1,5 @@
 #include<iostream> 
+#include<climits> 
 
 using namespace std;
 
@@ -10,7 +11,7 @@ int main(){
         cin>> arr[i];
     }
 
-    int maxSum = -1e6;
+    int maxSum = INT_MIN;
     for(int i =0; i<n; i++){
         for (int j = i; j<n; j++){
             int sum = 0; 
