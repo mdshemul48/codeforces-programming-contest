@@ -1,0 +1,1 @@
+{"name":"Local: pairSum","url":"c:\\codeforces-programming-contest\\DsaReletedProblem\\pairSum.cpp","tests":[{"id":1668526409147,"input":"5 7\n1 2 3 4 5","output":"1 4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\codeforces-programming-contest\\DsaReletedProblem\\pairSum.cpp","group":"local","local":true}
