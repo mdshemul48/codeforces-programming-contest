@@ -1,0 +1,1 @@
+{"name":"Local: maximumChar","url":"c:\\codeforces-programming-contest\\DsaReletedProblem\\maximumChar.cpp","tests":[{"id":1669227013910,"input":"aaabbbkjllkjdlfsdaaaa","output":"7"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\codeforces-programming-contest\\DsaReletedProblem\\maximumChar.cpp","group":"local","local":true}
