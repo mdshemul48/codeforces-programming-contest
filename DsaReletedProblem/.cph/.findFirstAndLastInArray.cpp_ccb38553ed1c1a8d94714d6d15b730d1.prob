@@ -1,0 +1,1 @@
+{"name":"Local: findFirstAndLastInArray","url":"c:\\codeforces-programming-contest\\DsaReletedProblem\\findFirstAndLastInArray.cpp","tests":[{"id":1671121926217,"input":"5 2\n3 4 2 3 2","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\codeforces-programming-contest\\DsaReletedProblem\\findFirstAndLastInArray.cpp","group":"local","local":true}
