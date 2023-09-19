@@ -6,10 +6,11 @@ int main()
 {
     int n;
     cin >> n;
-
-    int k = (n + 1) / 2;
-    int totalPress = n + (n * (k - 1));
-
-    cout<<totalPress<<endl;
+    int res = 0;
+    for (int i = 1; i <= n; i++)
+    {
+        res += ((n - i) * i) + 1;
+    }
+    cout << res << endl;
     return 0;
 }
