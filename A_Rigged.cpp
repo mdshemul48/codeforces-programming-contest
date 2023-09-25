@@ -1,62 +1,34 @@
-#include <bits/stdc++.h>
+#include <iostream>
+
 using namespace std;
 
-// custom define
-void dbg_out() { cerr << endl; }
-template<typename Head, typename... Tail>
-void dbg_out(Head H, Tail... T) { cerr << ' ' << H; dbg_out(T...); }
-#define dbg(...) cerr << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
-
-#define ll long long
-#define pub push_back
-#define pob pop_back
-#define all(X) (X).begin(), (X).end()
-
-#define yes cout << "YES" << endl
-#define no cout << "NO" << endl
-#define minus cout << -1 << endl
-#define cout(v) cout << v << endl;
-
-
-
-void exc()
+int main()
 {
-    int t,n;
-    cin>>t; 
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int n;
+        cin >> n;
 
-    while(t--){
-        cin>>n; 
-        int s,e;
-        cin>>s>>e;
+        int a, b;
         bool failed = 0;
-
-        if (!(s>1)){
-            failed = 1; 
-        }
-
-        for (int i = 1; i<n; i++){
-            int a,b; 
-            cin>>a>>b;
-            if (e>=b){
+        cin >> a >> b;
+        for (int i = 1; i < n; i++)
+        {
+            int x, y;
+            cin >> x >> y;
+            if (x >= a && y >= b)
+            {
                 failed = 1;
             }
         }
-    
-        if (failed){
-            minus;
-        }else {
-            cout<<s-1<<endl;
+        if (failed)
+        {
+            cout << -1 << endl;
         }
+        else
+            cout << a << endl;
     }
-
-
-    
-}
-
-int32_t main()
-{
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-    exc();
     return 0;
 }
