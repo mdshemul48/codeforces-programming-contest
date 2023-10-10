@@ -3,8 +3,12 @@ using namespace std;
 
 // custom define
 void dbg_out() { cerr << endl; }
-template<typename Head, typename... Tail>
-void dbg_out(Head H, Tail... T) { cerr << ' ' << H; dbg_out(T...); }
+template <typename Head, typename... Tail>
+void dbg_out(Head H, Tail... T)
+{
+    cerr << ' ' << H;
+    dbg_out(T...);
+}
 #define dbg(...) cerr << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
 
 #define ll long long
@@ -17,28 +21,17 @@ void dbg_out(Head H, Tail... T) { cerr << ' ' << H; dbg_out(T...); }
 #define minus cout << -1 << endl
 #define cout(v) cout << v << endl;
 
-
-
 void exc()
 {
-    int t,n;
-    cin>>t;
-    while(t--){
-        cin>>n; 
-        if (n<=6 || n== 9){
-            no;
-        }else {
-            yes;
-            if ((n-3)%3 == 0){
-                cout<< 1 <<" "<< 4<<" "<<n-5<<endl;
-            }else {
-                cout<< 1<<" "<< 2<<" " << n-3<<endl;
-            }
-        }
+    long long int a, b, c, d;
+    cin >> a >> b >> c >> d;
+
+    if (a * b + c == d || a + b * c == d || a - b * c == d || a * b - c == d || a - b + c == d || a + b - c == d)
+    {
+        cout<<"YES"<<endl;
+    }else {
+        cout<<"NO"<<endl;
     }
-
-
-    
 }
 
 int32_t main()

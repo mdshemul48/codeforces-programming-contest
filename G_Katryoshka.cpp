@@ -21,22 +21,30 @@ void dbg_out(Head H, Tail... T) { cerr << ' ' << H; dbg_out(T...); }
 
 void exc()
 {
-    int t,n;
-    cin>>t;
-    while(t--){
-        cin>>n; 
-        if (n<=6 || n== 9){
-            no;
-        }else {
-            yes;
-            if ((n-3)%3 == 0){
-                cout<< 1 <<" "<< 4<<" "<<n-5<<endl;
-            }else {
-                cout<< 1<<" "<< 2<<" " << n-3<<endl;
-            }
-        }
-    }
+    long long int a,b,c; 
+    cin>>a>>b>>c;
+  
+   if (a<=b && a<=c){
+    cout<<a<<endl;
+    return;
+   }else {
+        long long int sum =0;
+        long long int minG = min(a,min(b,c));
+        sum+= minG;
+        a-= minG;
+        b-= minG;
+        c-= minG;
 
+        if (a/2>0 && c>0){
+            sum+= min(a/2, c);
+        }
+
+        cout<<sum<<endl;
+
+
+   }
+
+    
 
     
 }
@@ -48,3 +56,5 @@ int32_t main()
     exc();
     return 0;
 }
+// 84 
+// 92

@@ -21,21 +21,11 @@ void dbg_out(Head H, Tail... T) { cerr << ' ' << H; dbg_out(T...); }
 
 void exc()
 {
-    int t,n;
-    cin>>t;
-    while(t--){
-        cin>>n; 
-        if (n<=6 || n== 9){
-            no;
-        }else {
-            yes;
-            if ((n-3)%3 == 0){
-                cout<< 1 <<" "<< 4<<" "<<n-5<<endl;
-            }else {
-                cout<< 1<<" "<< 2<<" " << n-3<<endl;
-            }
-        }
-    }
+    char n; 
+    cin>>n; 
+    if (n == 'z') cout<<'a'<<endl;
+    else cout<< ++n <<endl;
+
 
 
     
